@@ -13,7 +13,7 @@ public class ShooterBase extends SubsystemBase {
 
 public static Spark leftSpark = RobotContainer.shooterLeftSpark;
 public static Spark rightSpark = RobotContainer.shooterRightSpark;
-public static Spark ConveyorSpark = RobotContainer.conveyorSpark;
+public static WPI_TalonSRX ConveyorTalon = RobotContainer.conveyorTalon;
   /** Creates a new ShooterBase. */
   public ShooterBase() {}
 
@@ -32,9 +32,9 @@ public static Spark ConveyorSpark = RobotContainer.conveyorSpark;
   }
   
   public void ConveyorStart(){
-    ConveyorSpark.set(1);
+    ConveyorTalon.set(0.75);
   }
   public void ConveyorStop(){
-    ConveyorSpark.set(0);
+    ConveyorTalon.set(0);
   }
 }

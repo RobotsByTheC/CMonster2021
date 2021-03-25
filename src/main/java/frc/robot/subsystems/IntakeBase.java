@@ -14,8 +14,8 @@ public class IntakeBase extends SubsystemBase {
 
   public static WPI_TalonSRX IntakeMotor = RobotContainer.intakeTalon;
   public static DoubleSolenoid IntakeSolenoid = RobotContainer.intakeSolenoid; 
-  public static Spark LeftAgitatorSpark = RobotContainer.leftAgitatorSpark;
-  public static Spark RightAgitatorSpark = RobotContainer.rightAgitatorSpark;
+ // public static Spark LeftAgitatorSpark = RobotContainer.leftAgitatorSpark;
+ // public static Spark RightAgitatorSpark = RobotContainer.rightAgitatorSpark;
   
   /** Creates a new IntakeBase. */
   public IntakeBase() {
@@ -30,8 +30,8 @@ public class IntakeBase extends SubsystemBase {
 
   public void IntakeStartIn(){
     IntakeMotor.set(0.75);
-    LeftAgitatorSpark.set(1);
-    RightAgitatorSpark.set(1);
+  //  LeftAgitatorSpark.set(1);
+  //  RightAgitatorSpark.set(1);
   }
   
   public void IntakeStartOut(){
@@ -40,8 +40,8 @@ public class IntakeBase extends SubsystemBase {
   
   public void IntakeStop(){
     IntakeMotor.set(0);
-    LeftAgitatorSpark.set(0);
-    RightAgitatorSpark.set(0);
+  //  LeftAgitatorSpark.set(0);
+    //RightAgitatorSpark.set(0);
   }
   
   public void intakeSolenoidUp(){

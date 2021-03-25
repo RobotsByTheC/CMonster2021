@@ -40,15 +40,15 @@ public class RobotContainer {
     public static WPI_TalonSRX rightFrontTalon = new WPI_TalonSRX(4); 
     public static WPI_VictorSPX rightBackVictor = new WPI_VictorSPX(5);
 
-    public static WPI_TalonSRX intakeTalon = new WPI_TalonSRX(8); 
+    public static WPI_TalonSRX intakeTalon = new WPI_TalonSRX(8);
+    public static WPI_TalonSRX conveyorTalon = new WPI_TalonSRX(7);
 
     //Sparks
    public static Spark shooterLeftSpark = new Spark(2);
     public static Spark shooterRightSpark = new Spark(3);
-    public static Spark conveyorSpark = new Spark (4);
     public static Spark elevatorSpark = new Spark (5);
-    public static Spark leftAgitatorSpark = new Spark (6); 
-    public static Spark rightAgitatorSpark = new Spark (7); 
+    //public static Spark leftAgitatorSpark = new Spark (6); 
+    //public static Spark rightAgitatorSpark = new Spark (7); 
 
     //Compressors
     public static Compressor robotCompressor;
@@ -89,7 +89,7 @@ leftJoystick = new Joystick(0);
 rightJoystick = new Joystick(1);
 logiTech = new Joystick(2);
 
-shootBall = new JoystickButton (logiTech, 0);
+shootBall = new JoystickButton (logiTech, 8);
 conveyorBelt = new JoystickButton (logiTech, 3);
 elevatorUp = new JoystickButton (logiTech, 7);
 elevatorDown = new JoystickButton (logiTech, 5);
