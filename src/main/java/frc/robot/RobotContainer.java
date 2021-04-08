@@ -40,7 +40,7 @@ public class RobotContainer {
     public static WPI_TalonSRX rightFrontTalon = new WPI_TalonSRX(4); 
     public static WPI_VictorSPX rightBackVictor = new WPI_VictorSPX(5);
 
-    //public static WPI_TalonSRX controlWheelTalon = new WPI_TalonSRX(6);
+    public static WPI_TalonSRX controlWheelTalon = new WPI_TalonSRX(6);
     public static WPI_TalonSRX conveyorTalon = new WPI_TalonSRX(7);
     public static WPI_TalonSRX intakeTalon = new WPI_TalonSRX(8);
 
@@ -104,6 +104,10 @@ intakeUp = new JoystickButton (logiTech, 4);
 driveBase = new DriveBase();
 driveWithJoystick = new DriveWithJoystick();
 CommandScheduler.getInstance().setDefaultCommand(driveBase, driveWithJoystick);
+
+shooterBase = new ShooterBase();
+climberBase = new ClimberBase();
+intakeBase = new IntakeBase();
 
 
 shootBall.whileHeld(new ShootBall());
