@@ -23,7 +23,7 @@ public static WPI_TalonSRX ConveyorTalon = RobotContainer.conveyorTalon;
   }
 
   public void ShootBallOn(){
-    leftSpark.set(1);
+    leftSpark.set(-1);
     rightSpark.set(1);
   }
   public void ShootBallOff(){
@@ -32,7 +32,7 @@ public static WPI_TalonSRX ConveyorTalon = RobotContainer.conveyorTalon;
   }
   
   public void ConveyorStart(){
-    ConveyorTalon.set(0.75);
+    ConveyorTalon.set(-0.75);
   }
   public void ConveyorStop(){
     ConveyorTalon.set(0);

@@ -64,6 +64,7 @@ public class RobotContainer {
   public static ClimberBase climberBase; 
   public static ShooterBase shooterBase; 
   public static IntakeBase intakeBase; 
+  public static ControlWheelBase controlWheelBase; 
 
 //Initializes commands in RobotContainer
   public static DriveWithJoystick driveWithJoystick; 
@@ -81,6 +82,7 @@ public class RobotContainer {
   public static JoystickButton intakeOut; 
   public static JoystickButton intakeUp; 
   public static JoystickButton intakeDown; 
+  public static JoystickButton controlWheelButton; 
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
 
@@ -99,6 +101,7 @@ intakeIn = new JoystickButton(logiTech, 8);
 intakeOut = new JoystickButton(logiTech, 6); 
 intakeDown = new JoystickButton(logiTech, 2);
 intakeUp = new JoystickButton (logiTech, 4); 
+controlWheelButton = new JoystickButton (rightJoystick, 2);
 
 
 driveBase = new DriveBase();
@@ -108,22 +111,28 @@ CommandScheduler.getInstance().setDefaultCommand(driveBase, driveWithJoystick);
 shooterBase = new ShooterBase();
 climberBase = new ClimberBase();
 intakeBase = new IntakeBase();
+controlWheelBase = new ControlWheelBase();
 
 
 shootBall.whileHeld(new ShootBall());
 shootBall.whenReleased(new StopBall());
 conveyorBelt.whileHeld(new ConveyorStart());
 conveyorBelt.whenReleased(new ConveyorStop());
+
 elevatorUp.whileHeld(new ElevatorUp());
 elevatorUp.whenReleased(new ElevatorStop());
 elevatorDown.whileHeld(new ElevatorDown());
 elevatorDown.whenReleased(new ElevatorStop());
+
 intakeIn.whileHeld(new IntakeStart());
 intakeIn.whenReleased(new IntakeStop());
 intakeOut.whileHeld(new IntakeStartOut());
 intakeOut.whenReleased(new IntakeStop());
 intakeUp.whenPressed(new IntakeSolenoidUp());
 intakeDown.whenPressed(new IntakeSolenoidDown());
+
+controlWheelButton.whileHeld(new ControlWheelStart());
+controlWheelButton.whenReleased(new ControlWheelStop());
 
 
 
