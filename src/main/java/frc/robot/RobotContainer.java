@@ -97,11 +97,11 @@ shootBall = new JoystickButton (logiTech, 1);
 conveyorBelt = new JoystickButton (logiTech, 3);
 elevatorUp = new JoystickButton (logiTech, 7);
 elevatorDown = new JoystickButton (logiTech, 5);
-intakeIn = new JoystickButton(logiTech, 8);
+//intakeIn = new JoystickButton(logiTech, 8);
 intakeOut = new JoystickButton(logiTech, 6); 
-intakeDown = new JoystickButton(logiTech, 2);
+intakeDown = new JoystickButton(logiTech, 8);//used to be 2
 intakeUp = new JoystickButton (logiTech, 4); 
-controlWheelButton = new JoystickButton (rightJoystick, 2);
+controlWheelButton = new JoystickButton (logiTech, 2);
 
 
 driveBase = new DriveBase();
@@ -124,8 +124,8 @@ elevatorUp.whenReleased(new ElevatorStop());
 elevatorDown.whileHeld(new ElevatorDown());
 elevatorDown.whenReleased(new ElevatorStop());
 
-intakeIn.whileHeld(new IntakeStart());
-intakeIn.whenReleased(new IntakeStop());
+//intakeIn.whileHeld(new IntakeStart());
+//intakeIn.whenReleased(new IntakeStop());
 intakeOut.whileHeld(new IntakeStartOut());
 intakeOut.whenReleased(new IntakeStop());
 intakeUp.whenPressed(new IntakeSolenoidUp());
